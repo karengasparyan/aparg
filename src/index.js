@@ -6,9 +6,6 @@ import createSagaMiddleware from 'redux-saga';
 import App from './App';
 import reducers from './store/reducers';
 import watchers from './store/sagas';
-
-import "./assets/styles/style.scss";
-
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const saga = createSagaMiddleware();

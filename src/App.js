@@ -1,6 +1,7 @@
 import { Route, Routes,  unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
 import history from "./history";
 import Home from "./Pages/Home";
+import "./assets/styles/style.scss";
 
 function App() {
   return (

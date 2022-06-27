@@ -1,5 +1,7 @@
 .collapse {
+  z-index: 1;
   .buttonContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 172px;
@@ -30,6 +32,20 @@
       line-height: 1.6;
       letter-spacing: 0.5px;
       color: #666;
+    }
+
+    .chevronDownDropdown {
+      position: absolute;
+      top: 35%;
+      right: 13px;
+      font-family: FontAwesome5Pro sans-serif;
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #8c8c8c;
     }
 
     .section {

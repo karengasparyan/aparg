@@ -1,0 +1,56 @@
+.collapse {
+  z-index: 1;
+  .buttonContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 172px;
+    height: 40px;
+    margin: 0 5px;
+    padding: 5px 10px 4px;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+
+    .title {
+      font-family: Lato sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #292929;
+    }
+
+    .description {
+      font-family: Lato sans-serif;
+      font-size: 10px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+      color: #666;
+    }
+
+    .chevronDownDropdown {
+      position: absolute;
+      top: 35%;
+      right: 13px;
+      font-family: FontAwesome5Pro sans-serif;
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #8c8c8c;
+    }
+
+    .section {
+      margin-left: 5px;
+    }
+
+  }
+}
