@@ -1,0 +1,1 @@
+export const baseUrl = 'https://timeless.brainfors.am';
