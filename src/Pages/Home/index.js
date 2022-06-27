@@ -1,9 +1,9 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {useSearchParams, createSearchParams, useLocation} from 'react-router-dom';
+import {useSearchParams} from 'react-router-dom';
 import {watchList} from "../../store/actions/histories";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faRedo, faFilter, faChevronDown} from '@fortawesome/free-solid-svg-icons';
+import {faRedo, faFilter} from '@fortawesome/free-solid-svg-icons';
 import './style.scss';
 import Filters from "../../Components/Filters";
 import {parse} from "query-string";
@@ -15,8 +15,6 @@ const Home = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [intervalTime, setIntervalTime] = useState("10000");
   const [showFilters, setShowFilters] = useState(false);
-  const [show, setShow] = useState([]);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -47,7 +45,6 @@ const Home = () => {
     }
   }
 
-
   const onFilters = ({order, languages, intervalValue}) => {
     setIntervalTime(intervalValue);
     setSearchParams({order, languages: languages && languages?.join()})
@@ -68,21 +65,19 @@ const Home = () => {
     dispatch(watchList(queries));
   }
 
-
-
   return (
     <div className="home">
       <Header/>
       <div className="watchList">
         <h1 className="Watchlist-Name">Watchlist Name</h1>
         <span onClick={refresh} className="refreshButton">
-                  <FontAwesomeIcon icon={faRedo} className="redo"/>
-                  <span>Refresh</span>
-              </span>
+            <FontAwesomeIcon icon={faRedo} className="redo"/>
+            <span>Refresh</span>
+        </span>
         <span onClick={showFilterBar} className={showFilters ? "activeButton" : "inactiveButton"}>
-                  <FontAwesomeIcon icon={faFilter} className="redo"/>
-                  <span>Filters</span>
-              </span>
+            <FontAwesomeIcon icon={faFilter} className="redo"/>
+            <span>Filters</span>
+        </span>
         {showFilters && <Filters filters={onFilters} resetFilters={resetFilters}/>}
         {stories?.map(s => (
           <Story

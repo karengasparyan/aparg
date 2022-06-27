@@ -4,7 +4,7 @@ import useCollapse from "react-collapsed";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronDown, faChevronUp} from "@fortawesome/free-solid-svg-icons";
 
-const Collapse = (props,{title, description}) => {
+const Collapse = (props) => {
     const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
     return (
         <div className="collapse">

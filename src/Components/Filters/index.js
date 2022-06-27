@@ -2,11 +2,8 @@ import React, {useState, useCallback, useMemo} from 'react';
 import './style.scss';
 import Dropdown from "../Dropdown";
 import Collapse from "../Collapse";
-import {useSearchParams} from "react-router-dom";
-import {watchList} from "../../store/actions/histories";
 
 const Filters = ({filters, resetFilters}) => {
-    const [searchParams, setSearchParams] = useSearchParams();
 
     let [order, setOrder] = useState("");
     let [languages, setLanguages] = useState([]);

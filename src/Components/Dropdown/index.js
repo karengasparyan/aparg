@@ -1,8 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from "prop-types";
 import './style.scss';
-import useCollapse from "react-collapsed";
-import {logDOM} from "@testing-library/react";
 
 const Dropdown = ({onchange, options, checked, multiple = false, title }) => {
     return (
