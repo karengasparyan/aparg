@@ -1,8 +1,27 @@
-.dropdown{
- display: flex;
-  padding: 5px;
+.dropdown {
+  display: flex;
   flex-direction: column;
-  .optionsContainer{
+  width: 172px;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  z-index: 1;
+
+  .title {
+    margin: 0 0 21px 0;
+    font-family: Lato sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #292929;
+  }
+
+  .optionsContainer {
     display: flex;
+    margin-bottom: 21px;
   }
 }

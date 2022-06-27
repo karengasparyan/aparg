@@ -1,4 +1,33 @@
-.filters{
- display: flex;
- flex-direction: row;
+.filters {
+  display: flex;
+  flex-direction: row;
+  width: 775px;
+  height: 80px;
+  margin: 14px 207px 20px 70px;
+  padding: 20px 24px;
+  border-radius: 3px;
+  background-color: #eee;
+
+  .resetContainer {
+    width: 172px;
+    height: 40px;
+    margin: 0 0 0 5px;
+    padding: 12px 67px 12px 69px;
+    border-radius: 3px;
+    background-color: #3971c1;
+    cursor: pointer;
+
+    .reset {
+      width: 36px;
+      height: 16px;
+      font-family: Lato;
+      font-size: 12px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      color: #fff;
+    }
+  }
 }

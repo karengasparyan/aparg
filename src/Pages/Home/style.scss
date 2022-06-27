@@ -1,2 +1,75 @@
-.home{
+.home {
+  .watchList {
+    background-color: var(--white-two);
+
+    .Watchlist-Name {
+      width: 174px;
+      height: 29px;
+      margin: 0 0 15px 70px;
+      font-family: Lato sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #3971c1;
+    }
+
+    .refreshButton {
+      width: 100px;
+      height: 40px;
+      margin: 15px 6px 2px 70px;
+      padding: 11px 13px;
+      border-radius: 3px;
+      border: solid 1px var(--white);
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    .inactiveButton {
+      width: 100px;
+      height: 40px;
+      padding: 11px 13px;
+      border-radius: 3px;
+      border: solid 1px var(--white);
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    .activeButton {
+      width: 100px;
+      height: 40px;
+      padding: 12px 18px 12px 19px;
+      border-radius: 3px;
+      border: solid 1px #eee;
+      background-color: #eee;
+      cursor: pointer;
+
+    }
+
+    .redo {
+      width: 18px;
+      height: 18px;
+      margin: 0 10px 0 0;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #3971c1;
+    }
+
+    .mask {
+      width: 928px;
+      height: 75px;
+      margin: 20px 30px 7px 70px;
+      padding: 0 20px 0 0;
+      border-radius: 3px;
+      border: solid 1px var(--white);
+      background-color: #fff;
+    }
+  }
 }

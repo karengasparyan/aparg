@@ -8,11 +8,13 @@ const Collapse = (props,{title, description}) => {
         <div className="collapse">
             <div>
                 <div {...getToggleProps()} className="buttonContainer">
-                    <span>{props.title}</span>
-                    <span>{props.description}</span>
+                    <span className="title">{props.title}</span>
+                    <span className="description">{props.description}</span>
                 </div>
                 <section {...getCollapseProps()}>
-                    {props.children}
+                    <div style={{marginLeft: 5, zIndex: 1}}>
+                        {props.children}
+                    </div>
                 </section>
             </div>
         </div>

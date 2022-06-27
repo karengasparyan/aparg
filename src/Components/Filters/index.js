@@ -3,8 +3,9 @@ import './style.scss';
 import Dropdown from "../Dropdown";
 import Collapse from "../Collapse";
 import {useSearchParams} from "react-router-dom";
+import {watchList} from "../../store/actions/histories";
 
-const Filters = ({filters}) => {
+const Filters = ({filters, resetFilters}) => {
     const [searchParams, setSearchParams] = useSearchParams();
 
     let [order, setOrder] = useState("");
@@ -45,24 +46,49 @@ const Filters = ({filters}) => {
         }
         setLanguages(languages);
         filters({order, languages, intervalValue});
-    }, []);
+    }, [languages]);
 
     const handleChangeIntervals = useCallback((intervalValue) => {
         setIntervalValue(intervalValue)
         filters({order, languages, intervalValue});
     }, []);
 
+    const reset = () => {
+        resetFilters()
+        setOrder("")
+        setLanguages([])
+    }
+
     return (
         <div className="filters">
             <Collapse title="1 min" description="AUTOREFRESH">
-                <Dropdown onchange={handleChangeIntervals} options={intervalsOptions} checked={intervalValue}/>
+                <Dropdown
+                  onchange={handleChangeIntervals}
+                  options={intervalsOptions}
+                  checked={intervalValue}
+                  title="AUTOREFRESH"
+                />
             </Collapse>
             <Collapse title="Top Rated" description="ORDER">
-                <Dropdown onchange={handleChangeOrders} options={ordersOptions} checked={order}/>
+                <Dropdown
+                  onchange={handleChangeOrders}
+                  options={ordersOptions}
+                  checked={order}
+                  title="ORDER"
+                />
             </Collapse>
             <Collapse title="All Languages" description="LANGUAGES">
-                <Dropdown onchange={handleChangeLanguages} options={languagesOptions} multiple={true}/>
+                <Dropdown
+                  onchange={handleChangeLanguages}
+                  options={languagesOptions}
+                  checked={languages}
+                  multiple={true}
+                  title="LANGUAGES"
+                />
             </Collapse>
+            <div className="resetContainer" onClick={reset}>
+                <span className="reset">RESET</span>
+            </div>
         </div>
     );
 };
