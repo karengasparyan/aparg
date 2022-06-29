@@ -60,68 +60,119 @@
       letter-spacing: normal;
       color: #3971c1;
     }
-
-    .mask {
-      position: relative;
-      display: flex;
+    .maskContainer{
       width: 928px;
+      position: relative;
+      background-color: #fff;
       margin: 20px 30px 7px 70px;
       padding: 0 20px 0 0;
       border-radius: 3px;
       border: solid 1px var(--white);
-      background-color: #fff;
-      cursor: pointer;
-
-      .title {
-        font-family: Lato sans-serif;
-        font-size: 16px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.5;
-        letter-spacing: normal;
-        color: #000;
-      }
-
-      .chevronDown {
-        font-family: FontAwesome5Pro sans-serif;
-        font-size: 12px;
-        font-weight: 300;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        text-align: center;
-        color: #8c8c8c;
-      }
-
-      .infoContainer {
+      transition: 0.5s;
+      .mask {
         display: flex;
-
-        img {
-          width: 18px;
-          height: 18px;
-          margin: 2px;
-        }
-      }
-
-      .chevronDown {
-        position: absolute;
-        right: 20px;
-        bottom: 50%;
+        width: 684px;
         transition: 0.5s;
-      }
 
-      .percent {
-        position: absolute;
-        right: 53px;
-        bottom: 35%;
-        width: 40px;
-        height: 30px;
-        padding: 7px 6px 6px;
-        border-radius: 5px;
-        border: solid 1px #ef6c00;
-        background-color: #fff;
+        .title {
+          font-family: Lato sans-serif;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          color: #000;
+          cursor: pointer;
+        }
+
+        .description {
+          margin: 10px 0;
+          font-family: Lato sans-serif;
+          font-size: 15px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.53;
+          letter-spacing: normal;
+          color: #292929;
+        }
+
+        .bookmarkContainer {
+          position: absolute;
+          bottom: 12px;
+          right: 0;
+
+          .thumbs {
+            width: 16px;
+            height: 16px;
+            margin: 2px 45px 0 10px;
+            font-family: FontAwesome5Pro sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #292929;
+            cursor: pointer;
+          }
+          .bookmarkText {
+            margin: 0 0 0 10px;
+            font-family: Lato sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #292929;
+            cursor: pointer;
+          }
+        }
+
+        .chevronDown {
+          font-family: FontAwesome5Pro sans-serif;
+          font-size: 12px;
+          font-weight: 300;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: center;
+          color: #8c8c8c;
+          cursor: pointer;
+        }
+
+        .infoContainer {
+          display: flex;
+
+          img {
+            width: 18px;
+            height: 18px;
+            margin: 2px;
+          }
+        }
+
+        .chevronDown {
+          position: absolute;
+          right: 20px;
+          bottom: 50%;
+          transition: 0.5s;
+        }
+
+        .percent {
+          position: absolute;
+          right: 53px;
+          bottom: 35%;
+          width: 40px;
+          height: 30px;
+          padding: 7px 6px 6px;
+          border-radius: 5px;
+          border: solid 1px #ef6c00;
+          background-color: #fff;
+        }
       }
     }
 
