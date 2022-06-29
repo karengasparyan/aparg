@@ -23,5 +23,8 @@
   .optionsContainer {
     display: flex;
     margin-bottom: 21px;
+    .label {
+      margin-left: 10px;
+    }
   }
 }

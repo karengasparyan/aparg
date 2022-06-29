@@ -1,5 +1,5 @@
 :root {
- --white-two: #e2e2e2;
+  --white-two: #e2e2e2;
 }
 
 * {
@@ -11,12 +11,41 @@
 @media (max-width: 768px) {
   .home {
     .watchList {
-      .refreshButton {
+      .maskContainer {
+        margin: 20px 30px 7px 20px
+      }
 
+      .watchContainer {
+        display: flex;
+        flex-direction: row;
+        margin: 30px 0 19px 20px;
+        justify-content: space-between;
+
+        .watchlistNameContainer {
+          margin: 0;
+        }
+
+        .refreshAndFiltersContainer {
+          display: flex;
+          justify-content: flex-end;
+          margin: 0 25px 0 0;
+          .refreshButton {
+            .redo {
+              margin: 0
+            }
+          }
+        }
       }
     }
   }
+  .filters {
+    margin: 0;
+  }
+  .collapse .buttonContainer {
+    width: 165px;
+  }
 }
+
 
 @media (max-width: 320px) {
   .home {

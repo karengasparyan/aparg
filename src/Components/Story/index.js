@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronDown, faChevronUp, faThumbsUp, faThumbsDown, faBookmark} from "@fortawesome/free-solid-svg-icons";
 
 const Story = ({id, imageUrls, expanded_url, title, domain_cached_logo_url, domain_host, description, score}) => {
-  const [height, setHeight] = useState(100);
+  const [height, setHeight] = useState(75);
   const [showBookmarks, setShowBookmarks] = useState(false);
   const color = score > 40 ? "#4eb495" : "#ffb300";
 
@@ -14,7 +14,7 @@ const Story = ({id, imageUrls, expanded_url, title, domain_cached_logo_url, doma
 
   const showDescription = () => {
     setHeight(height => {
-      return height > 100 ? 100 : 200
+      return height > 75 ? 75 : 220
     })
   };
 
@@ -34,9 +34,9 @@ const Story = ({id, imageUrls, expanded_url, title, domain_cached_logo_url, doma
             <p>{domain_host}</p>
           </div>
           <div style={{border: `solid 1px ${color}`}} className="percent">{score}%</div>
-          <FontAwesomeIcon onClick={showDescription} icon={height > 100 ? faChevronUp : faChevronDown}
+          <FontAwesomeIcon onClick={showDescription} icon={height > 75 ? faChevronUp : faChevronDown}
                            className="chevronDown"/>
-          {height > 100 ? <div>
+          {height > 75 ? <div>
             <span className="description">{description}</span>
             <div className="bookmarkContainer">
               {showBookmarks && <span>
