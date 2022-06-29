@@ -32,12 +32,11 @@ const Home = () => {
   }, [])
 
   useEffect(() => {
-    dispatch(watchList({}));
     document.addEventListener("scroll", handleScroll);
     return () => {
       document.removeEventListener("scroll", handleScroll)
     }
-  }, [])
+  }, [next_page_token])
 
   const handleScroll = (ev) => {
     if (ev.target.documentElement.scrollHeight - (ev.target.documentElement.scrollTop + window.innerHeight) < 1){
@@ -81,6 +80,7 @@ const Home = () => {
         {showFilters && <Filters filters={onFilters} resetFilters={resetFilters}/>}
         {stories?.map(s => (
           <Story
+            key={s.id}
             id={s.id}
             imageUrls={s.imageUrls}
             expanded_url={s.expanded_url}
